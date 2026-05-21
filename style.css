@@ -1,0 +1,200 @@
+/*CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pinyon+Script&display=swap');
+/* Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-principal:#747545;
+    --fonte-destaque: "Pinyon Script", cursive;
+    --fonte-texto:"IBM Plex Serif", serif;
+    --fonte-outros:"Cardo", serif;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+}
+/* Header Cabeçalho*/
+.cabecalho{
+    background-color: var(--cor-principal);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+.logo{
+   
+}
+.logo a{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-family: var(--fonte-destaque);
+}
+.menu{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.menu a {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+
+
+/*SEÇÕES*/
+#destaque {
+    min-height: 100vh;
+    padding: 20px 5%;
+    background-color: rgba(152, 165, 115, 0.803);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-destaque{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 2px solid black;
+}
+.card-destaque img {
+    width: 50%;
+}
+/* Lado esquerdo */
+.logo-destaque{
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+/* Imagem */
+.logo-destaque img{
+    height: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sobre {
+    min-height: 100vh;
+    padding: 90px 5% 0 5%;
+    background-color: rgb(251, 251, 251);
+    background-image: url(assets/sobre.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#sobre h1 {
+    font-size: 50px;
+    color: white;
+    margin-bottom:20px;
+}
+.card-sobre-nos{
+    width: 38%;
+    text-align: left;
+}
+
+.card-sobre-nos p{
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.btn-mapa {
+    padding: 15px 40px;
+    background-color: white;
+    color: black;
+}
+
+
+    /*=== SEÇÃO CARDÁPIO ===*/
+#cardapio {
+    min-height: 100vh;
+    padding: 130px 5% 20px 5%;
+    background-color: rgb(240, 6, 177);
+  
+}
+.card-container{
+    display: flex; /*Alinhar os cards*/
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-wrap: wrap; /*quebra os card*/
+    gap: 20px; /*espaçamento entre os card*/ 
+
+}
+ .card-container .card{
+    width: 250px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(83, 64, 42);
+    padding: 5px;
+}
+
+.card figure{
+ width: 238px;
+ height: 238px;
+ border-radius: 5px;
+ background-color: brown;
+ margin-bottom: 15px;
+}
+.card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card h3 {
+
+}
+.card p {
+
+}
+.card h4 {
+    color: rgb(0, 0, 0);
+}
+#bebidas {
+    min-height: 100vh;
+    padding: 20px 5%;
+    background-color: rgb(8, 28, 72);
+}
+#contato {
+    min-height: 100vh;
+    padding: 20px 5%;
+    background-color: rgb(123, 22, 127);
+}
