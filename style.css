@@ -11,6 +11,8 @@
     --cor-principal:#747545;
     --cor--dourada:#d4af37;
     --cor-clara:#f5e6c8;
+    --cor-velvet:#461615;
+    --cor-maronn:#2C0F10;
 
 
     --fonte-destaque: "Pinyon Script", cursive;
@@ -83,7 +85,7 @@ body{
    
 }
 .logo a{
-    color: rgb(0, 0, 0);
+    color: var(--cor-clara);
     font-size: 1.5rem;
     font-family: var(--fonte-destaque);
     display: flex;
@@ -133,42 +135,110 @@ body{
 /*SEÇÕES*/
 #destaque {
     min-height: 100vh;
-    padding: 20px 5%;
-    background-color: rgba(152, 165, 115, 0.803);
+    padding: 120px 8% 60px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url(assets/fundoitalia.jpg.png);
+
+    background-size: cover;
+    background-position: center;
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    gap: 50px;
 }
+
+/* LOGO */
+
+.logo-destaque{
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-destaque img{
+    width: 420px;
+
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.35));
+
+    transition: 0.4s ease;
+}
+
+.logo-destaque img:hover{
+    transform: scale(1.03);
+}
+
+/* TEXOS */
+
 .card-destaque{
     width: 50%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
-    color: white;
-    font-size: 2em;
+    color: var(--cor-clara);
+}
+
+.card-destaque h1{
+    font-size: 6rem;
+
     font-family: var(--fonte-destaque);
-}
-.card-destaque img {
-    width: 50%;
-}
-/* Lado esquerdo */
-.logo-destaque{
-    width: 60%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-weight: normal;
 
-    margin-top: 50px;
+    margin-bottom: 10px;
+
+    line-height: 1.1;
 }
-/* Imagem */
-.logo-destaque img{
-    height: 100px;
-    width: 100%;
-    object-fit: cover;
+
+.card-destaque p{
+    font-size: 2rem;
+
+    font-family: var(--fonte-outros);
+
+    font-style: italic;
+
+    margin-bottom: 30px;
+
+    color: #f8f1e4;
+}
+
+/* LINHA DECORATIVA */
+
+.linha-decorativa{
+    width: 180px;
+    height: 2px;
+
+    background-color: var(--cor--dourada);
+
+    position: relative;
+
+    margin-bottom: 35px;
+}
+
+.linha-decorativa::after{
+    content: "✦";
+
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--cor--dourada);
+
+    background-color: transparent;
+
+    padding: 0 10px;
+
+    font-size: 1.2rem;
 }
 
 
@@ -219,9 +289,20 @@ body{
 #cardapio {
     min-height: 100vh;
     padding: 130px 5% 20px 5%;
-    background-color: var(--cor-principal);
-  
+   background-color: var(--cor-maronn)
 }
+#cardapio h1{
+     text-align: center;
+
+    font-size: 4rem;
+
+    margin-bottom: 40px;
+
+    color: var(--cor-clara);
+
+    font-family: var(--fonte-destaque);
+}
+
 .card-container{
     display: flex; /*Alinhar os cards*/
     justify-content: space-evenly; 
@@ -235,7 +316,7 @@ body{
     height: 450px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: rgb(83, 64, 42);
+    background-color: var(--cor-principal);
     padding: 5px;
 
 
@@ -268,14 +349,11 @@ body{
 }
 .card h3 {
     
-    color: var(--cor-dourada);
-
-    font-size: 1.5rem;
-
-    margin: 15px 15px 10px;
-
+    color: #d4af37;
+    font-size: 1,5rem;
+    margin: 20px;
     font-family: var(--fonte-outros);
-}
+    }
 .card p {
     color: white;
 
