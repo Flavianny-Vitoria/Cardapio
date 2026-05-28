@@ -277,7 +277,7 @@ body{
     background-color:var(--cor-dourada);
     border-radius: 10px;
     transition: 0.3s ease;
-    color: black;
+    color:var(--cor-clara);
 }.btn-mapa:hover{
     transform: translateY(-3px);
 
@@ -376,84 +376,79 @@ body{
     padding: 20px 5%;
     background-color: rgb(8, 28, 72);
 }
-#bebidas h1{
-    text-align: center;
-
-    font-size: 4rem;
-
-    margin-bottom: 40px;
-
-    color: var(--cor-dourada);
-
-    font-family: var(--fonte-destaque);
-}
-
-
-
-.card-bebidas{
-    display: flex; /*Alinhar os cards*/
-    justify-content: space-evenly; 
-    align-items: center;
-    flex-wrap: wrap; /*quebra os card*/
-    gap: 20px; /*espaçamento entre os card*/ 
-
-}
-/* estiliza só a área da imagem*/
-.card figure{
- width: 238px;
- height: 238px;
- border-radius: 5px;
- background-color: brown;
- margin-bottom: 15px;
-}
-/*estiliza a imgem em si*/
-.card figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-bebida{
-    width: 260px;
-
-    background: rgba(75,77,44,0.95);
-
-    border-radius: 25px;
-
-    overflow: hidden;
-
-    transition: 0.4s ease;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-
-    text-align: center;
-   
-}
-
-.card-bebida:hover{
-    transform: translateY(-10px) scale(1.03);
-
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-
-    border: 1px solid rgba(212,175,55,0.5);
-}
-
-.card-bebida h3{
-    color: #d4af37;
-    font-size: 2rem;
-    margin: 20px;
-    font-family: var(--fonte-outros);
-}
-
-.card-bebida p{
-    color: white;
-
-    margin: 0 20px 20px;
-
-    line-height: 1.6;
-}
 #contato {
     min-height: 100vh;
-    padding: 20px 5%;
-    background-color: rgb(123, 22, 127);
+    padding: 100px 5% 20px 5%;  /* t r b l*/
+    background-color:var(--cor-velvet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contato .col-contato{
+ width: 50%;
+ height: 700px; /*ajustével*/
+ border: 2px solid black;/*retirar*/
+}
+.col-contato .midias{
+    width: 100%;
+    height: 30%;
+}
+.midias figure{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+.icone-midias{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+
+}
+.col-contato .endereco{
+    width: 100%;
+    height: 70%; /*ajustavel*/
+    
+}
+.endereco .iframe{
+    width: 90%;
+    border-radius: 20px;
+}
+.col-contato form{
+    width: 90%;
+    padding:10px;
+    display: flex;
+    flex-direction: column; /*empilhados*/
+    justify-content: flex-start; /*alinhado para o lado esquerdo*/
+    gap: 15px;
+}
+.col-contato form input, textarea{
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    border: none; /*tirar borda*/
+    padding-left: 10px; /*a hora que escreve da uma recuada*/
+    resize: none; /*bloqueia a regulagem*/
+}
+.col-contato form button{
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    background-color:#747545;
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer; /*quano passa o mouse muda para maozinha*/
+    margin: 10px auto;
+}
+.col-contato form label{
+    font-size: var(--fonte-texto);
+    color: white;
+}
+.col-contato h2{
+    font-family: var(--fonte-destaque);
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--cor-clara);
 }
